@@ -1,0 +1,39 @@
+<MyLayout>
+
+	BoxLayout:
+		orientation:"vertical"
+		size:root.width,root.height
+
+		padding:50
+		spacing:20
+
+		Label:
+			id:lebel_1
+			#text:"This is text"
+			color:"white"
+
+			
+
+		RoundedButton:
+			id:btn_1
+			text:"NEW PASSWORD"
+			font_size:12
+			pos_hint:{'center_x': 0.5}
+			size_hint:.15,.12
+
+			on_press: root.on_click()
+
+			
+
+<RoundedButton@Button>
+	background_color:(0,0,0,0)
+	background_normal:""
+	canvas.before:
+		Color:
+			rgba:(48/255,84/255,150/255,1)
+		RoundedRectangle:
+			size:self.size
+			pos:self.pos
+			radius:[18]
+
+
